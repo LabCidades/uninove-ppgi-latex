@@ -1,0 +1,199 @@
+\documentclass[courier]{uninove-ppgi} %courier ou times
+\usepackage[normalem]{ulem}
+\usepackage{listings}
+\usepackage{color, colortbl}
+\usepackage[toc,page]{appendix}
+
+\renewcommand*{\arraystretch}{1.1}
+\setlength\arrayrulewidth{0.7pt}
+\setlength{\parindent}{0.9cm}
+
+\usepackage{booktabs}
+\usepackage{leading}
+\usepackage{multicol}
+\usepackage{booktabs, cellspace, multirow}
+\setlength\aboverulesep{2pt}
+\setlength\belowrulesep{2pt}
+\setlength\cellspacetoplimit{3pt} 
+\setlength\cellspacebottomlimit{3pt}
+
+\usepackage{adjustbox}
+\usepackage{array}
+\usepackage{newfloat}
+
+\DeclareFloatingEnvironment[listname=Lista de Quadros,fileext=frm,placement={!ht},name=Quadro]{quadros}
+\captionsetup[quadros]{labelfont=bf, labelformat=simple, labelsep=endash}
+\captionsetup[figure]{labelformat=simple, labelsep=endash}
+\captionsetup[table]{labelformat=simple, labelsep=endash}
+\captionsetup{justification=centering}
+
+\usepackage{graphicx}
+\usepackage{subfig}
+
+% local definitions (utilizado para controlar a posição do número da equação)
+\newcommand{\numberequation}[1]{\addtocounter{equation}{#1}\tag{\theequation}}
+
+\usepackage[portuguese, onelanguage, ruled, vlined, linesnumbered]{algorithm2e} 
+
+\newcommand\mycommfont[1]{\textnormal{#1}} 
+\SetCommentSty{mycommfont}
+\SetFuncSty{textsc}
+\SetKwComment{Comment}{$\triangleright$\ }{}
+\SetNlSty{bfseries}{\color{black}}{}
+\SetArgSty{textnormal}
+\SetKwBlock{Begin}{}{}
+
+\pgfplotsset{compat=1.16}
+\usepackage{lmodern}
+\usepackage{anyfontsize}
+
+\usepackage{pythonhighlight}
+\usepackage{emptypage}
+\usepackage{epigraph}
+
+\begin{document}
+    \lstset{
+        language=xml,
+        tabsize=3,
+        frame=shadowbox,
+        rulesepcolor=\color{gray},
+        xleftmargin=20pt,
+        framexleftmargin=15pt,
+        keywordstyle=\color{blue}\bf,
+        commentstyle=\color{OliveGreen},
+        stringstyle=\color{red},
+        numbers=left,
+        numberstyle=\tiny,
+        numbersep=5pt,
+        breaklines=true,
+        showstringspaces=false,
+        basicstyle=\footnotesize,
+        emph={food,name,price},emphstyle={\color{magenta}}
+        }
+
+    % parametros de capa e folha de rosto (é necessário configurar todos)
+    \Universidade{UNIVERSIDADE NOVE DE JULHO - UNINOVE}
+    \Programa{PROGRAMA DE PÓS GRADUAÇÃO EM INFORMÁTICA E GESTÃO DO CONHECIMENTO - PPGIGC} 	
+    \Autor{NOME DO ALUNO/ALUNA}	 
+
+    \Titulo{TÍTULO DO TRABALHO}
+    \Tipoexame{qualificação} % qualificação ou defesa
+    \Titulacao{Doutor} % Mestre ou Doutor
+    \Orientador{Dr(a). Nome do(a) Orientador(a)}
+    \Coorientador{Dr(a). Nome do(a) Coorientador(a)} % Se não houver, deve ser comentada a linha no .CLS
+    
+    % Descomentar as linhas abaixo e no .CLS para utilizar na disciplina de seminários
+    %\Ingresso{08/2018}
+    %\Linha{LP1 - Sistemas Inteligentes}
+    \Ano{2021} % inserir o ano correspondente
+
+    % gera a capa
+    \capa
+
+    % gera folha de rosto
+    \folharosto
+
+    % Ficha catalográfica
+    %\includepdf[pages=-]{fichaCatalografica.pdf}
+
+    % Ficha de aprovação
+    % \includepdf[pages=-]{parecer_assinado.pdf}
+
+    % ##################### Início dos elementos pré-textuais ############################
+    
+    % Dedicatória (Opcional)
+    \centeredchapterstyle
+    \input{pre_textuais/01_dedicatoria.tex}
+    \thispagestyle{empty}
+    \clearpage
+
+    % Agradecimentos (Opcional)
+    \input{pre_textuais/02_agradecimentos.tex}
+    \thispagestyle{empty}
+    \clearpage
+
+    % Epígrafe (Opcional)
+    \input{pre_textuais/03_epigrafe.tex}
+
+    % Resumo (Obrigatório)
+    \input{pre_textuais/04_resumo.tex}
+
+    % Abstract (Obrigatório)
+    \input{pre_textuais/05_abstract.tex}
+
+    % Sumário (Obrigatório)
+    \begingroup
+        \makeatletter \let\ps@plain\ps@empty \makeatother
+        \tableofcontents
+    \endgroup
+    \thispagestyle{empty}
+            
+    % Lista de figuras
+    \renewcommand*\listfigurename{Lista de Ilustrações}
+    \listoffigures
+    \thispagestyle{empty}
+
+    % Lista de tabelas
+    \listoftables
+    \thispagestyle{empty}
+
+    % Lista de quadros
+    \listofquadros
+    \thispagestyle{empty}
+
+    % Lista de algoritmos (Opcional)
+    %\listofalgorithms
+    %\addcontentsline{toc}{chapter}{Lista de Algoritmos}
+    %\thispagestyle{empty}
+
+    % Lista de abreviaturas (Opcional)
+    \begin{listaabreviaturas}%
+        MM & Morfologia matemática \\
+        CC & Componente conexo \\
+        EE & Elemento estruturante
+     \end{listaabreviaturas}
+
+    % Lista de símbolos (Opcional)
+    \begin{listasimbolos}%
+        \simbolos{Conceitos básicos} {%
+          $ \mathbb{Z} $ & Conjunto dos números inteiros \\
+          $ \mathbb{N} $ & Conjunto dos números naturais \\
+          $ \mathbb{R} $ & Conjunto dos números reais
+        }
+        
+        \simbolos{Imagens} {%
+          $ f \text{ e } g $ & Variáveis que representam imagens \\
+          $ p, q \in \mathcal{D} $ & Variáveis que representam pares $ (x,y) $ aqui chamados de \textit{pixels}
+        }
+        \end{listasimbolos}
+
+    % ############### Fim dos elementos pré-textuais ######################
+
+    \regularchapterstyle
+
+    % ############### Início dos Capítulos (Obrigatório ) #################
+
+        % Introdução
+            \input{capitulos/cap01_introducao.tex}
+
+        % Base Teórica
+            \input{capitulos/cap02_fundamentacao_teorica.tex}
+
+        % Conclusão
+            \input{capitulos/cap03_conclusao.tex}
+
+        % Trabalhos Futuros
+            \input{capitulos/cap04_trabalhos_futuros.tex}
+
+    % ##################### Fim dos Capítulos ############################
+
+    % Bibliografia (Obrigatório)
+    \bibliography{refs}
+
+    % ##################### Apêndices ############################
+    \renewcommand{\appendixtitle}{Apêndices}
+    \begin{appendixenv}
+        \input{pos_textuais/01_apendice.tex}
+    \end{appendixenv}
+
+\end{document}
