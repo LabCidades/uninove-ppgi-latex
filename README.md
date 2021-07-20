@@ -4,7 +4,7 @@ Este é um template LaTeX para teses e dissertações desenvolvido para o PPGIGC
 
 * [http://latex-exemplo.blogspot.com.br/2015/11/modelo-latex-para-dissertacoes-e-teses.html](http://latex-exemplo.blogspot.com.br/2015/11/modelo-latex-para-dissertacoes-e-teses.html)
 
-* Este template foi **atualizado* com base no desenvolvimento de Charles Gobber (2018) [https://github.com/gobber/uninove-ppgi-latex](https://github.com/gobber/uninove-ppgi-latex)
+* Este template foi **atualizado** com base no desenvolvimento de Charles Gobber (2018) [https://github.com/gobber/uninove-ppgi-latex](https://github.com/gobber/uninove-ppgi-latex)
 
 ## Orientações
 
