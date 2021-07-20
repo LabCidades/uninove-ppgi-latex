@@ -1,10 +1,10 @@
-# Template LaTeX PPGI - Uninove
+# Template LaTeX PPGI - UNINOVE
 
 
 [![CC BY-SA
 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by-sa/4.0/)
 
-Este é um template LaTeX para teses e dissertações desenvolvido para o PPGI (Programa de Pós Graduação em Informática e Gestão do Conhecimento) da Universidade Nove de Julho - Uninove. Ele é uma modificação e extensão do template do IME-USP desenvolvido pelo professor Jesús P. Mena-Chalco:
+Este é um template LaTeX para teses e dissertações desenvolvido para o PPGI (Programa de Pós Graduação em Informática e Gestão do Conhecimento) da Universidade Nove de Julho - UNINOVE. Ele é uma modificação e extensão do template do IME-USP desenvolvido pelo professor Jesús P. Mena-Chalco:
 
 * [http://latex-exemplo.blogspot.com.br/2015/11/modelo-latex-para-dissertacoes-e-teses.html](http://latex-exemplo.blogspot.com.br/2015/11/modelo-latex-para-dissertacoes-e-teses.html)
 
