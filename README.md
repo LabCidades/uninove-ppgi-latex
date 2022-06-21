@@ -4,7 +4,7 @@
 [![CC BY-SA
 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by-sa/4.0/)
 
-Este é um template LaTeX para teses e dissertações desenvolvido para o PPGI (Programa de Pós Graduação em Informática e Gestão do Conhecimento) da Universidade Nove de Julho - UNINOVE. Ele é uma modificação e extensão do template do IME-USP desenvolvido pelo professor Jesús P. Mena-Chalco:
+Este é um template LaTeX para teses e dissertações desenvolvido para o PPGIGC (Programa de Pós Graduação em Informática e Gestão do Conhecimento) da Universidade Nove de Julho - UNINOVE. Ele é uma modificação e extensão do template do IME-USP desenvolvido pelo professor Jesús P. Mena-Chalco:
 
 * [http://latex-exemplo.blogspot.com.br/2015/11/modelo-latex-para-dissertacoes-e-teses.html](http://latex-exemplo.blogspot.com.br/2015/11/modelo-latex-para-dissertacoes-e-teses.html)
 
@@ -12,19 +12,22 @@ Este é um template LaTeX para teses e dissertações desenvolvido para o PPGI (
 
 ## Orientações
 
-O arquivo **main.tex** contém diversos exemplos de como utilizar os comandos disponíveis no *template* como a inclusão de:
+Nos arquivos **.tex** que compõe este *template*, existem diversos exemplos de como utilizar os comandos disponíveis como a inclusão de:
 + Algoritmos;
 + Equações;
 + Figuras;
 + Quadros;
-+ Tabelas.
++ Tabelas;
++ Citações (direta e indireta).
 
 Além da:
 + Criação de seções e subseções;
 + Inclusão de Apêndices e Anexos;
 + Inclusão de resumos de capítulos;
 + Marcação com tachado (colorido);
-+ Inclusão de observações (coloridas).
++ Inclusão de observações (coloridas);
++ Comentários para correções (colorido);
++ Inclusão de tabelas no modo *paisagem*.
 
 Bibliografia
 + O arquivo *refs.bib* contém exemplos de como realizar a inclusão dos dados bibliográficos (esses dados podem ser incluídos manualmente ou com auxílio de um gerenciador de bibliografia como o [Mendeley](https://www.mendeley.com/)).
@@ -46,6 +49,8 @@ clean.bat
 ## Modificações
 
 As modificações no *template* são livres para adequação de cada um, desde que estejam dentro das normas estabelecidas pela universidade (ABNT).
+
+Este *template* está de acordo com o **Manual de Orientações para Apresentação de Trabalhos Acadêmicos** do Sistema de Bibliotecas Professor José Storópoli (Uninove) em sua versão 2020.
 
 ## Dicas úteis
 

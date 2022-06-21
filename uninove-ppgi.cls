@@ -2,7 +2,7 @@
 %	Esta classe contém o modelo latex de dissertação ou tese utilizado pela uninove
 %	no programa de pós graduação do PPGIGC e está de acordo com o modelo institucional
 %	
-%	Alguns parÂmetros foram baseados no modelo latex do IME USP, desenvolvido
+%	Alguns parâmetros foram baseados no modelo latex do IME USP, desenvolvido
 % 	pelo professor Jesús P. Mena-Chalco:
 %	http://latex-exemplo.blogspot.com.br/2015/11/modelo-latex-para-dissertacoes-e-teses.html
 %
@@ -12,49 +12,13 @@
 \LoadClass[12pt,oneside,a4paper]{book}
 % ----------------------------------------- % 
 %
-%	Recebendo fonte padrão 
-%
-%	Chamada : 
-%
-%		\documentclass[courier]{uninove-ppgi} -> fonte courier
-%
-%		\documentclass[times]{uninove-ppgi} -> fonte times
-%
-% ----------------------------------------- % 
-
-\newif\iftimes@font
-\newif\ifcourier@font
-
-% Correção de warnings
-\DeclareRobustCommand{\ttfamily}{\fontfamily{lmtt}\selectfont}
-\DeclareRobustCommand\sectt[1]{{\fontsize{13}{12}\bfseries\ttfamily#1}}
-
-\DeclareOption{times}{\times@fonttrue \courier@fontfalse}
-\DeclareOption{courier}{\courier@fonttrue \times@fontfalse}
-
-\ExecuteOptions{courier}
-
-\ProcessOptions\relax
-
-\ifcourier@font
-
-	\RequirePackage{courier}
-	
-\else
-
-	\RequirePackage{times}
-	
-\fi
-
-% ----------------------------------------- % 
-%
 %	Carregando pacotes
 %
 % ----------------------------------------- % 
-
 \RequirePackage[T1]{fontenc}
-\RequirePackage[brazil]{babel}
-\RequirePackage[utf8]{inputenc}
+\RequirePackage{courier}					% fonte padrão
+\RequirePackage[brazil]{babel}				% especificação de mais de um idioma
+\RequirePackage[utf8]{inputenc}				% codificações de caracteres especiais
 \RequirePackage[pdftex]{graphicx}           % usamos arquivos pdf/png como figuras
 \RequirePackage{setspace}                   % espaçamento flexível
 \RequirePackage{indentfirst}                % indentação do primeiro parágrafo
@@ -62,33 +26,55 @@
 \RequirePackage[nottoc]{tocbibind}          % acrescentamos a bibliografia/indice/conteudo no Table of Contents
 \RequirePackage{type1cm}                    % fontes realmente escaláveis
 \RequirePackage{listings}                   % para formatar código-fonte (ex. em Java)
-\RequirePackage{titletoc}
-\RequirePackage[fixlanguage]{babelbib}
+\RequirePackage{titletoc}					% permite mais de duas colunas no documento
+\RequirePackage[fixlanguage]{babelbib}		% correção para bibliografia
 \RequirePackage[font=small,format=plain,labelfont=bf,up,textfont=it,up]{caption}
 \RequirePackage[usenames,svgnames,dvipsnames]{xcolor}
 \RequirePackage[a4paper,top=3cm,bottom=2.0cm,left=3cm,right=2.0cm]{geometry} % margens
 \RequirePackage[hyphens,spaces,obeyspaces]{url}
-\RequirePackage[pdftex,plainpages=false,pdfpagelabels,pagebackref,colorlinks=true,citecolor=Black,linkcolor=NavyBlue,urlcolor=Black,filecolor=Black,bookmarksopen=true]{hyperref} % links coloridos
-\RequirePackage[all]{hypcap} % soluciona o problema com o hyperref e capitulos
-\RequirePackage[alf]{abntex2cite} % Pacote para citações no padrão abnt 6023 
-\RequirePackage{amssymb} % matemática
-\RequirePackage{amsmath} % matemática
-\RequirePackage{amsthm} % matemática
-\RequirePackage{mathtools} % matemática     
-\RequirePackage{tikz,tikz-3dplot} % tikz 
-\RequirePackage{pgfplots} % gráficos
-\RequirePackage{pgfgantt} % gráficos de Gantt
-\RequirePackage{capt-of} % tikz 
-\RequirePackage{titlesec} % chapter, section, subsection...
-\RequirePackage[titles]{tocloft} % ajuste de espaçamentos de lista de tabelas e figuras
-\RequirePackage{fancyhdr, lipsum} % header das páginas (padrão baseado no template do IME-USP)
-\RequirePackage{verbatim} % comentários longos por meio do enviromment comment
-\RequirePackage{enumerate} % modificar estilo do ambiente enumerate
+\RequirePackage[pdftex,plainpages=false,pdfpagelabels,pagebackref,colorlinks=true,citecolor=Black,linkcolor=NavyBlue,urlcolor=Black,filecolor=Black,bookmarksopen=true]{hyperref} 				% links coloridos
+\RequirePackage[all]{hypcap} 				% soluciona o problema com o hyperref e capitulos
+\RequirePackage[alf]{abntex2cite} 			% citações no padrão abnt 6023 
+\RequirePackage{amssymb} 					% matemática
+\RequirePackage{amsmath} 					% matemática
+\RequirePackage{amsthm} 					% matemática
+\RequirePackage{mathtools} 					% matemática
+\RequirePackage{tikz,tikz-3dplot} 			% tikz 
+\RequirePackage{capt-of} 					% tikz 
+\RequirePackage{pgfplots} 					% gráficos
+\RequirePackage{pgfgantt} 					% gráficos de Gantt
+\RequirePackage{titlesec} 					% chapter, section, subsection...
+\RequirePackage[titles]{tocloft} 			% ajuste de espaçamentos de lista de tabelas e figuras
+\RequirePackage{fancyhdr, lipsum} 			% header das páginas (padrão baseado no template do IME-USP)
+\RequirePackage{verbatim} 					% comentários longos por meio do enviromment comment
+\RequirePackage{enumerate} 					% modificar estilo do ambiente enumerate
 \RequirePackage{tabularx}
+\RequirePackage[normalem]{ulem}
+\RequirePackage{listings}
+\RequirePackage{color, colortbl}
+\RequirePackage[toc,page]{appendix}
+\RequirePackage{booktabs}
+\RequirePackage{leading}
+\RequirePackage{multicol}
+\RequirePackage{booktabs, cellspace, multirow}
+\RequirePackage{adjustbox}
+\RequirePackage{array}
+\RequirePackage{newfloat}
+\RequirePackage{graphicx}
+\RequirePackage{subfig}
+\RequirePackage[portuguese, onelanguage, ruled, vlined, linesnumbered]{algorithm2e}
+\RequirePackage{lmodern}
+\RequirePackage{anyfontsize}
+\RequirePackage{pythonhighlight}
+\RequirePackage{emptypage}
+\RequirePackage{epigraph}
+\RequirePackage{lscape} 					% tabela no modo retrato
+\RequirePackage{xspace} 					% remove espaços em renewcommand
 
 % ----------------------------------------- % 
 %
-%	Algumas configurações de pacotes e outros 
+%	Algumas configurações de pacotes e 
+%	outros ajustes
 %
 % ----------------------------------------- % 
 
@@ -102,6 +88,34 @@
 %
 \setcounter{tocdepth}{4}
 \setcounter{secnumdepth}{4} % for subsubsection
+
+
+\DeclareFloatingEnvironment[listname=Lista de Quadros,fileext=frm,placement={!ht},name=Quadro]{quadros}
+\captionsetup[quadros]{labelfont=bf, labelformat=simple, labelsep=endash}
+\captionsetup[figure]{labelformat=simple, labelsep=endash}
+\captionsetup[table]{labelformat=simple, labelsep=endash}
+\captionsetup{justification=centering}
+\renewcommand*{\arraystretch}{1.1}
+
+% local definitions (utilizado para controlar a posição do número da equação)
+\newcommand{\numberequation}[1]{\addtocounter{equation}{#1}\tag{\theequation}}
+\newcommand\mycommfont[1]{\textnormal{#1}} 
+
+\setlength\arrayrulewidth{0.7pt}
+\setlength{\parindent}{0.9cm}
+\setlength\aboverulesep{2pt}
+\setlength\belowrulesep{2pt}
+\setlength\cellspacetoplimit{3pt} 
+\setlength\cellspacebottomlimit{3pt}
+\setlength{\headheight}{15.5pt}
+
+\SetCommentSty{mycommfont}
+\SetFuncSty{textsc}
+\SetKwComment{Comment}{$\triangleright$\ }{}
+\SetNlSty{bfseries}{\color{black}}{}
+\SetArgSty{textnormal}
+\SetKwBlock{Begin}{}{}
+\pgfplotsset{compat=1.16}
 
 \newcommand{\regularchapterstyle}{%
 	\titleformat{\chapter}
@@ -170,8 +184,8 @@
 
 \renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{#1}}{}}
 \fancypagestyle{plain}{%
-   \fancyhf{}%
-   \fancyhead[R]{\thepage}%
+	\fancyhf{}%
+	\fancyhead[R]{\thepage}%
 }
 
 % 
@@ -231,8 +245,8 @@
 \renewcommand*{\backref}[1]{}
 \renewcommand*{\backrefalt}[4]{{\tiny%
     \ifcase #1 Not cited.%
-          \or Citado na p\'{a}g.~#2.%
-          \else Citado na p\'{a}g. #2.%
+		\or Citado na p\'{a}g.~#2.%
+		\else Citado na p\'{a}g. #2.%
     \fi%
     }}
 
@@ -270,14 +284,14 @@
 
 \raggedbottom                          
 
-% ----------------------------------------- % 
+% ------------------------------------------------------- % 
 %
 %	Variáveis para criar capa e folha de rosto
 %
 %	Atenção : Sempre configure todas as variáveis antes de
 %	          chamar os métodos.
 %
-% ----------------------------------------- % 
+% ------------------------------------------------------- % 
 
 \newcommand{\Universidade}[1]{
 	\newcommand{\universidade}{#1}
@@ -375,8 +389,7 @@
 		
 			\begin{minipage}{.5\textwidth}
 				Exame de \tipoexame{} apresentada ao Programa de Pós-Graduação em Informática e Gestão do Conhecimento (PPGIGC) da 
-				Universidade Nove de Julho - UNINOVE, como parte dos requisitos para a obtenção do título de 
-				\titulacao{} em Informática e Gestão do Conhecimento.
+				Universidade Nove de Julho - UNINOVE, como parte dos requisitos para a obtenção do título de \titulacao{} em Informática e Gestão do Conhecimento.
 			\end{minipage}
 			
 			\vspace*{1cm}
@@ -493,7 +506,7 @@
 \newcommand{\simbolos}[2]{%
 	\section*{#1}	
 	\begin{tabular}{lp{0.8\textwidth}}\small
-	  #2
+		#2
 	\end{tabular}%
 }%
 
@@ -572,11 +585,21 @@
 %	vermelho e azul
 %
 % ----------------------------------------- %
-\newcommand{\obs}[1]{%
+\newcommand{\observacao}[1]{%
 	{	
-		\fontsize{10.5pt}{\baselineskip}\selectfont
-		\textbf{\textcolor{red}{Observação:}} \textcolor{Blue}{#1}
+		\fontsize{12pt}{\baselineskip}\selectfont
+		\textit{\textcolor{Blue}{#1}}\xspace
 	}
+}
+
+% ----------------------------------------- %
+% 
+% Utilizar este comando para realizar 
+% marcações para correção com o orientador
+% Após a correção, trocar a cor por "black"
+% ----------------------------------------- %
+\newcommand{\correcao}[1]{%
+	\textcolor{red}{\{#1\}}\xspace
 }
 
 % ----------------------------------------- %
@@ -586,7 +609,7 @@
 % ----------------------------------------- %
 \newcommand{\tachado}[1]{%
 	{
-		\textcolor{red}{\sout{#1}}
+		\textcolor{red}{\sout{#1}}\xspace
 	}
 }
 
@@ -609,13 +632,13 @@
 	}
 
 \newenvironment{changemargin}[2]{%
-  \begin{list}{}{%
-    \setlength{\topsep}{0pt}%
-    \setlength{\leftmargin}{#1}%
-    \setlength{\rightmargin}{#2}%
-    \setlength{\listparindent}{\parindent}%
-    \setlength{\itemindent}{\parindent}%
-    \setlength{\parsep}{\parskip}%
-  }%
-  \item[]}{\end{list}}
+	\begin{list}{}{%
+		\setlength{\topsep}{0pt}%
+		\setlength{\leftmargin}{#1}%
+		\setlength{\rightmargin}{#2}%
+		\setlength{\listparindent}{\parindent}%
+		\setlength{\itemindent}{\parindent}%
+		\setlength{\parsep}{\parskip}%
+	}%
+	\item[]}{\end{list}}
 \endinput

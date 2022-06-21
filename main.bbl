@@ -1,0 +1,46 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\newcommand{\titleset}[1]{\textbf{#1}}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.7 }
+
+\bibitem[Abbasi, Altmann e Hossain 2011]{Abbasi2011}
+\abntrefinfo{Abbasi, Altmann e Hossain}{ABBASI; ALTMANN; HOSSAIN}{2011}
+{ABBASI, A.; ALTMANN, J.; HOSSAIN, L. \titleset{Identifying the effects of
+  co-authorship networks on the performance of scholars: A correlation and
+  regression analysis of performance measures and social network analysis
+  measures}.
+\emph{Journal of Informetrics}, Elsevier Ltd, v.~5, n.~4, p. 594--607, 2011.
+ISSN 17511577.
+{d}oi:\href{http://dx.doi.org/10.1016/j.joi.2011.05.007}{10.1016/j.joi.2011.05.007}.}
+
+\bibitem[D'Uggento, Ricci e Toma 2016]{DUggento2016}
+\abntrefinfo{D'Uggento, Ricci e Toma}{D'UGGENTO; RICCI; TOMA}{2016}
+{D'UGGENTO, A.~M.; RICCI, V.; TOMA, E. \titleset{An indicator proposal to
+  evaluate research activities based on Scimago institutions ranking (SIR)
+  data: An application for italian high education institutions}.
+\emph{Electronic Journal of Applied Statistical Analysis}, v.~9, n.~4, p.
+  655--674, 2016.
+ISSN 20705948.
+{d}oi:\href{http://dx.doi.org/10.1285/i20705948v9n4p655}{10.1285/i20705948v9n4p655}.}
+
+\bibitem[Mitchell et al. 1997]{mitchell1997machine}
+\abntrefinfo{Mitchell et al.}{MITCHELL et al.}{1997}
+{MITCHELL, T.~M. et al. \emph{\titleset{Machine learning}}. [S.l.]: McGraw-hill
+  New York, 1997. 432~p.}
+
+\bibitem[Villase{\~{n}}or-Almaraz et al. 2019]{Villasenor-Almaraz2019}
+\abntrefinfo{Villase{\~{n}}or-Almaraz et al.}{VILLASE{\~{N}}OR-ALMARAZ et
+  al.}{2019}
+{VILLASE{\~{N}}OR-ALMARAZ, M. et al. \titleset{Impact factor correlations with
+  Scimago Journal Rank, Source Normalized Impact per Paper, Eigenfactor Score,
+  and the CiteScore in Radiology, Nuclear Medicine {\&} Medical Imaging
+  journals}.
+\emph{La radiologia medica}, Springer Milan, v.~124, n.~6, p. 495--504, jun
+  2019.
+ISSN 0033-8362.
+{d}oi:\href{http://dx.doi.org/10.1007/s11547-019-00996-z}{10.1007/s11547-019-00996-z}.}
+
+\end{thebibliography}
